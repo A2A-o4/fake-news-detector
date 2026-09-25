@@ -16,3 +16,11 @@ def test_pipeline_learns_simple_split():
     labels = ["real", "real", "fake", "fake"]
     model = build_pipeline().fit(texts, labels)
     assert model.predict(["shocking secret miracle cure"])[0] == "fake"
+
+
+def test_liar_label_mapping_is_binary():
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
+    from download_data import LIAR_BINARY
+
+    assert set(LIAR_BINARY.values()) == {"fake", "real"}
+    assert len(LIAR_BINARY) == 6
