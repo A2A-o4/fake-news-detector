@@ -6,3 +6,8 @@ venv/
 *.joblib
 .pytest_cache/
 .vscode/
+# datasets are downloaded by scripts/download_data.py
+data/raw/
+data/fake_or_real_news.csv
+data/liar_*.csv
+model.joblib
