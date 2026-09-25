@@ -1,0 +1,175 @@
+{
+  "fake_or_real_news": {
+    "n_train": 4842,
+    "n_test": 1211,
+    "models": {
+      "Naive Bayes": {
+        "cv_f1_macro_mean": 0.9227015525412087,
+        "cv_f1_macro_std": 0.006811484970996755,
+        "test": {
+          "accuracy": 0.9265070189925682,
+          "precision_fake": 0.958041958041958,
+          "recall_fake": 0.8939641109298532,
+          "f1_fake": 0.9248945147679325,
+          "f1_macro": 0.9264731264219614
+        }
+      },
+      "Logistic Regression": {
+        "cv_f1_macro_mean": 0.9357505260086605,
+        "cv_f1_macro_std": 0.004088961659797792,
+        "test": {
+          "accuracy": 0.9504541701073493,
+          "precision_fake": 0.9438202247191011,
+          "recall_fake": 0.9592169657422512,
+          "f1_fake": 0.9514563106796117,
+          "f1_macro": 0.9504330457276642
+        }
+      },
+      "Linear SVM": {
+        "cv_f1_macro_mean": 0.9392625994278058,
+        "cv_f1_macro_std": 0.0032727954652756594,
+        "test": {
+          "accuracy": 0.9521056977704376,
+          "precision_fake": 0.9454253611556982,
+          "recall_fake": 0.9608482871125612,
+          "f1_fake": 0.9530744336569579,
+          "f1_macro": 0.952085277536742
+        }
+      }
+    },
+    "best_model": "Linear SVM",
+    "confusion_matrix": [
+      [
+        589,
+        24
+      ],
+      [
+        34,
+        564
+      ]
+    ],
+    "top_words": {
+      "fake": [
+        "2016",
+        "october",
+        "hillary",
+        "article",
+        "november",
+        "election",
+        "november 2016",
+        "share",
+        "russia",
+        "email",
+        "source",
+        "com",
+        "wikileaks",
+        "print",
+        "podesta"
+      ],
+      "real": [
+        "said",
+        "gop",
+        "obama",
+        "debate",
+        "cruz",
+        "tuesday",
+        "republican",
+        "sen",
+        "president",
+        "candidates",
+        "conservative",
+        "republicans",
+        "percent",
+        "thursday",
+        "state"
+      ]
+    }
+  },
+  "liar": {
+    "n_train": 11553,
+    "n_test": 1283,
+    "models": {
+      "Naive Bayes": {
+        "cv_f1_macro_mean": 0.5911417351821573,
+        "cv_f1_macro_std": 0.0036137896808441598,
+        "test": {
+          "accuracy": 0.6017147310989868,
+          "precision_fake": 0.5483870967741935,
+          "recall_fake": 0.45863309352517984,
+          "f1_fake": 0.49951028403525954,
+          "f1_macro": 0.5843829737328401
+        }
+      },
+      "Logistic Regression": {
+        "cv_f1_macro_mean": 0.5864158645754803,
+        "cv_f1_macro_std": 0.009439202514235263,
+        "test": {
+          "accuracy": 0.6095089633671084,
+          "precision_fake": 0.5551102204408818,
+          "recall_fake": 0.4982014388489209,
+          "f1_fake": 0.5251184834123223,
+          "f1_macro": 0.5967749928643344
+        }
+      },
+      "Linear SVM": {
+        "cv_f1_macro_mean": 0.5843202617533748,
+        "cv_f1_macro_std": 0.009730449222066931,
+        "test": {
+          "accuracy": 0.6118472330475448,
+          "precision_fake": 0.5568627450980392,
+          "recall_fake": 0.5107913669064749,
+          "f1_fake": 0.5328330206378987,
+          "f1_macro": 0.6004165103189494
+        }
+      }
+    },
+    "best_model": "Naive Bayes",
+    "confusion_matrix": [
+      [
+        255,
+        301
+      ],
+      [
+        210,
+        517
+      ]
+    ],
+    "top_words": {
+      "fake": [
+        "history state",
+        "illegals",
+        "texas public",
+        "economy grown",
+        "face",
+        "unemployment percent",
+        "voted cut",
+        "seven years",
+        "organizations",
+        "auto companies",
+        "scheme",
+        "christians",
+        "babies born",
+        "debunked",
+        "increase history"
+      ],
+      "real": [
+        "countries",
+        "says david",
+        "expanded",
+        "national average",
+        "population growth",
+        "youve",
+        "says scott",
+        "georgia",
+        "torture",
+        "cities",
+        "remain",
+        "decades",
+        "statewide",
+        "losses",
+        "terms"
+      ]
+    },
+    "majority_baseline_accuracy": 0.5666406858924395
+  }
+}
